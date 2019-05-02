@@ -100,7 +100,7 @@ if [ -f "$BUILD_DIR/Makefile" ]; then
     make install
 else
     stack setup
-    stack build --copy-bins
+    stack build --ghc-options='-O2' --copy-bins
 fi
 
 # Set context environment variables.
